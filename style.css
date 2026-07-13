@@ -1,0 +1,693 @@
+/* -------------------------------------------------
+   Happy Five Months - Shraddha
+   style.css
+--------------------------------------------------*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:
+    linear-gradient(180deg,#fffaf7,#fff4ef);
+
+    color:#4d3a3a;
+
+    font-family:"Inter",sans-serif;
+
+    overflow-x:hidden;
+}
+
+/* ---------------- Intro ---------------- */
+
+#intro{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(145deg,#fffdfb,#fff4ef);
+
+    z-index:999;
+
+    transition:1.2s ease;
+}
+
+.intro-card{
+
+    width:min(700px,90%);
+
+    background:white;
+
+    padding:70px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.08);
+
+}
+
+.intro-card h2{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:32px;
+
+    font-weight:400;
+
+    color:#8d6c6c;
+}
+
+.intro-card h1{
+
+    font-family:"Great Vibes";
+
+    font-size:92px;
+
+    margin-top:10px;
+
+    color:#b96f82;
+}
+
+.subtitle{
+
+    margin-top:10px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+    color:#9b7c7c;
+}
+
+.small{
+
+    margin-top:35px;
+
+    line-height:2;
+
+    color:#7d6b6b;
+
+    font-family:"Cormorant Garamond";
+
+    font-size:24px;
+}
+
+.divider{
+
+    width:120px;
+
+    height:1px;
+
+    background:#d9bcbc;
+
+    margin:30px auto;
+}
+
+#openLetter{
+
+    margin-top:45px;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#d7899d;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.35s;
+
+    font-family:"Cormorant Garamond";
+}
+
+#openLetter:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(215,137,157,.3);
+
+}
+
+/* ---------------- Main ---------------- */
+
+.hidden{
+
+    opacity:0;
+}
+
+#letter{
+
+    transition:1.4s;
+
+    padding:80px 20px;
+}
+
+/* ---------------- Paper ---------------- */
+
+.paper{
+
+    width:min(900px,92%);
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:90px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.08);
+
+    position:relative;
+}
+
+/* subtle paper texture */
+
+.paper::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    border-radius:28px;
+
+    opacity:.05;
+
+    background-image:
+    radial-gradient(circle at 20% 20%,#000 1px,transparent 1px);
+
+    background-size:28px 28px;
+
+    pointer-events:none;
+}
+
+.title{
+
+    font-family:"Great Vibes";
+
+    text-align:center;
+
+    font-size:68px;
+
+    color:#b86d82;
+}
+
+.date{
+
+    margin-top:15px;
+
+    text-align:center;
+
+    font-family:"Cormorant Garamond";
+
+    font-size:28px;
+
+    color:#7c6666;
+}
+
+.rose{
+
+    width:90px;
+
+    height:90px;
+
+    margin:40px auto;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,#e8afbe,#d78398);
+
+    opacity:.45;
+}
+
+/* ---------------- Poem ---------------- */
+
+.poem{
+
+    margin-top:20px;
+}
+
+.poem p{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:34px;
+
+    font-weight:400;
+
+    line-height:1.85;
+
+    text-align:center;
+
+    margin:70px auto;
+
+    color:#473636;
+
+    max-width:680px;
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+    animation:fadeUp .9s forwards;
+}
+
+.poem p:nth-child(1){animation-delay:.1s;}
+.poem p:nth-child(2){animation-delay:.3s;}
+.poem p:nth-child(3){animation-delay:.5s;}
+.poem p:nth-child(4){animation-delay:.7s;}
+.poem p:nth-child(5){animation-delay:.9s;}
+.poem p:nth-child(6){animation-delay:1.1s;}
+.poem p:nth-child(7){animation-delay:1.3s;}
+.poem p:nth-child(8){animation-delay:1.5s;}
+.poem p:nth-child(9){animation-delay:1.7s;}
+.poem p:nth-child(10){animation-delay:1.9s;}
+.poem p:nth-child(11){animation-delay:2.1s;}
+.poem p:nth-child(12){animation-delay:2.3s;}
+.poem p:nth-child(13){animation-delay:2.5s;}
+
+.ending{
+
+    font-size:38px;
+
+    color:#9d4d65;
+}
+
+/* ---------------- Signature ---------------- */
+
+.signature{
+
+    margin-top:90px;
+
+    text-align:center;
+}
+
+.line{
+
+    width:180px;
+
+    height:1px;
+
+    background:#ccb0b0;
+
+    margin:0 auto 30px;
+}
+
+.signature h3{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:30px;
+
+    color:#876666;
+
+    font-weight:400;
+}
+
+.signature h1{
+
+    font-family:"Great Vibes";
+
+    font-size:72px;
+
+    color:#b56d80;
+
+    margin-top:10px;
+}
+
+/* ---------------- Flowers ---------------- */
+
+.flower{
+
+    position:fixed;
+
+    width:260px;
+
+    height:260px;
+
+    opacity:.18;
+
+    pointer-events:none;
+
+    background-repeat:no-repeat;
+
+    background-size:contain;
+
+    filter:blur(.3px);
+}
+
+.flower-top-left{
+
+    top:-40px;
+    left:-40px;
+
+    background-image:
+    radial-gradient(circle,#efb5c5 0 18%,transparent 20%),
+    radial-gradient(circle,#f3cad4 0 18%,transparent 20%);
+}
+
+.flower-top-right{
+
+    top:-50px;
+    right:-50px;
+
+    background-image:
+    radial-gradient(circle,#f4bbc9 0 18%,transparent 20%);
+}
+
+.flower-bottom-left{
+
+    bottom:-60px;
+    left:-50px;
+
+    background-image:
+    radial-gradient(circle,#f0c4cf 0 18%,transparent 20%);
+}
+
+.flower-bottom-right{
+
+    bottom:-60px;
+    right:-50px;
+
+    background-image:
+    radial-gradient(circle,#efb7c8 0 18%,transparent 20%);
+}
+
+/* ---------------- Petals ---------------- */
+
+#petals{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+}
+
+.petal{
+
+    position:absolute;
+
+    width:14px;
+
+    height:18px;
+
+    background:#efb2c1;
+
+    border-radius:60% 60% 60% 0;
+
+    opacity:.7;
+
+    animation:fall linear forwards;
+}
+
+/* ---------------- Animations ---------------- */
+
+@keyframes fadeUp{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+@keyframes fall{
+
+    from{
+
+        transform:
+        translateY(-120px)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+        translateY(120vh)
+        rotate(540deg);
+
+    }
+
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media(max-width:900px){
+
+.paper{
+
+padding:60px 35px;
+
+}
+
+.poem p{
+
+font-size:28px;
+
+}
+
+.title{
+
+font-size:54px;
+
+}
+
+.intro-card{
+
+padding:50px 30px;
+
+}
+
+.intro-card h1{
+
+font-size:70px;
+
+}
+
+.signature h1{
+
+font-size:60px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.poem p{
+
+font-size:23px;
+
+line-height:1.7;
+
+}
+
+.title{
+
+font-size:42px;
+
+}
+
+.date{
+
+font-size:22px;
+
+}
+
+.paper{
+
+padding:40px 25px;
+
+}
+
+.intro-card h1{
+
+font-size:56px;
+
+}
+
+.small{
+
+font-size:20px;
+
+}
+
+}
+/* ===============================
+        Secret Letter
+================================*/
+
+#secretOverlay{
+
+position:fixed;
+inset:0;
+
+background:rgba(255,250,247,.95);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+opacity:0;
+visibility:hidden;
+
+transition:.8s;
+
+z-index:99999;
+
+backdrop-filter:blur(8px);
+
+}
+
+#secretOverlay.show{
+
+opacity:1;
+visibility:visible;
+
+}
+
+#secretCard{
+
+width:min(700px,90%);
+
+background:white;
+
+padding:70px;
+
+border-radius:25px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+text-align:center;
+
+animation:appear .9s ease;
+
+}
+
+#secretCard h2{
+
+font-family:"Great Vibes";
+
+font-size:60px;
+
+margin-bottom:35px;
+
+color:#b86f82;
+
+}
+
+#secretText{
+
+font-family:"Cormorant Garamond";
+
+font-size:32px;
+
+line-height:1.8;
+
+white-space:pre-wrap;
+
+color:#4f3d3d;
+
+min-height:320px;
+
+}
+
+#closeSecret{
+
+margin-top:35px;
+
+padding:14px 36px;
+
+border:none;
+
+border-radius:30px;
+
+background:#d8899d;
+
+color:white;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+@keyframes appear{
+
+from{
+
+opacity:0;
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+transform:none;
+
+}
+
+}
+/* ===============================
+        Floating Hearts Canvas
+================================*/
+
+#hearts{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:2;
+}
+#daysTogether{
+    margin-top:12px;
+    text-align:center;
+    font-family:"Cormorant Garamond";
+    font-size:24px;
+    color:#9b7c7c;
+    letter-spacing:1px;
+}
+.footer-line{
+    margin-top:60px;
+    text-align:center;
+    font-family:"Cormorant Garamond";
+    font-size:20px;
+    color:#8f7777;
+    opacity:.7;
+    font-style:italic;
+}
